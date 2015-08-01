@@ -6,7 +6,7 @@ verlte() {
   [ "$1" = `echo -e "$1\n$2" | sort -t '.' -k 1,1n -k 2,2n -k 3,3n -k 4,4n | head -n1` ]
 }
 
-for i in ctags git ghc make vim happy; do
+for i in ctags git ghc make vim ; do
   command -v $i >/dev/null
   if [ $? -ne 0 ] ; then
     msg "Installer requires ${i}. Please install $i and try again."
@@ -29,10 +29,10 @@ if ! verlte '7.8.4' $GHC_VER ; then
   msg "GHC version 7.8.4 or later is required. Aborting."
   exit 1
 fi
-for i in ghc-mod hasktags codex hscope pointfree pointful hoogle stylish-haskell; do
+for i in happy ghc-mod hasktags codex hscope pointfree pointful hoogle stylish-haskell; do
   command -v $i >/dev/null
   if [ $? -ne 0 ] ; then
-    msg "Installer requires ${i}. Attempting to use stack. (Note: ghc-mod, hoogle and hscope may require ghc-7.8.4)"
+    msg "Installer requires ${i}. Attempting to use stack with LTS."
     stack install $i --prefetch
   fi
 done
