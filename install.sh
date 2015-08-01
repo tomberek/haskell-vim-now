@@ -82,7 +82,7 @@ vim -T dumb -E -u $endpath/.vimrc +PluginInstall! +PluginClean! +qall
 msg "Building vimproc.vim"
 make -C ~/.vim/bundle/vimproc.vim
 
-msg "Installing git-hscope"
+msg "Installing git-hscope (may be needed to be moved to PATH somewhere)"
 mkdir -p $endpath/bin
 cp $endpath/git-hscope $endpath/bin
 

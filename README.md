@@ -25,6 +25,12 @@ and lets you
 * highlight DSLs
 * work with git
 
+## Prepare for installation
+Download and setup `GHC` using stack. From inside the haskell-vim-directory, the stack.yaml will point toward LTS 2.20 allowing the easiest path toward the executables needed.
+
+This process has been tested in Windows 7 with [Babun](https://babun.github.io) where `network` will need to be installed either with some options (TODO: any ideas on how to pass this to `stack`?) or by just calling stack from a normal Windows shell like `cmd.exe`.
+
+Ensure the location stack will send executables to is in your PATH.
 
 ## Installation
 
