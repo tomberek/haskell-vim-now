@@ -1,0 +1,4 @@
+flags: {}
+packages:
+extra-deps: [ "pure-cdb-0.1.1" ]
+resolver: lts-2.20
