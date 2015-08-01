@@ -87,7 +87,7 @@ mkdir -p $endpath/bin
 cp $endpath/git-hscope $endpath/bin
 
 msg "Building Hoogle database..."
-$endpath/bin/hoogle data
+hoogle data
 
 msg "Setting git to use fully-pathed vim for messages..."
 git config --global core.editor $(which vim)
